@@ -1,6 +1,11 @@
 # From uniffi-bingen-react-native
 rust_modules/
 *.a
+rust/target/
+src/Native*
+src/generated/
+src/index.tsx
+
 
 # OSX
 #
