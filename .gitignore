@@ -5,6 +5,9 @@ rust/target/
 src/Native*
 src/generated/
 src/index.tsx
+android/src/main/java/
+cpp/
+
 
 
 # OSX
