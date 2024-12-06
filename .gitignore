@@ -1,3 +1,7 @@
+# From uniffi-bingen-react-native
+rust_modules/
+*.a
+
 # OSX
 #
 .DS_Store

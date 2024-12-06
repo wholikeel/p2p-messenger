@@ -37,6 +37,11 @@
     "!**/.*"
   ],
   "scripts": {
+    "ubrn:ios":      "ubrn build ios     --config ubrn.config.yaml --and-generate && (cd example/ios && pod install)",
+    "ubrn:android":  "ubrn build android --config ubrn.config.yaml --and-generate",
+    "ubrn:checkout": "ubrn checkout      --config ubrn.config.yaml",
+    "ubrn:clean": "rm -Rf cpp/ android/src/main/java ios/ src/Native* src/generated/ src/index.ts*",
+    "postinstall": "yarn ubrn:checkout && yarn ubrn:android --release && yarn ubrn:ios --release",
     "example": "yarn workspace p2p-messenger-example",
     "test": "jest",
     "typecheck": "tsc",
@@ -48,7 +53,8 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "rust"
   ],
   "repository": {
     "type": "git",
@@ -199,5 +205,8 @@
     "type": "module-new",
     "languages": "cpp",
     "version": "0.45.0"
+  },
+  "dependencies": {
+    "uniffi-bindgen-react-native": "https://github.com/jhugman/uniffi-bindgen-react-native"
   }
 }
