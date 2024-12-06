@@ -1,0 +1,12 @@
+[package]
+name = "p2p-messenger-rs"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+uniffi = "0.28.2"
+thiserror = "1.0.64"
+
+
+[lib]
+crate-type = ["cdylib", "staticlib", "lib"]

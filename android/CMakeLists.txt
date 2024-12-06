@@ -26,7 +26,7 @@ include_directories(
 
 add_library(p2p-messenger            SHARED
     ../cpp/p2p-messenger.cpp
-    ../cpp/generated/foobar.cpp
+    ../cpp/generated/p2p_messenger_rs.cpp
     cpp-adapter.cpp
 )
 
@@ -40,7 +40,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Werror")
 
 cmake_path(
   SET MY_RUST_LIB
-  ${CMAKE_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI}/libfoobar.a
+  ${CMAKE_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI}/libp2p_messenger_rs.a
   NORMALIZE
 )
 add_library(my_rust_lib STATIC IMPORTED)
