@@ -1,23 +1,23 @@
 # p2p-messenger
 
-P2P distributed messenging application
+P2P distributed messenging application.
 
-## Installation
+## Running
+
+### Nix
 
 ```sh
-npm install p2p-messenger
+git clone https://www.github.com/wholikeel/p2p-messenger
+cd p2p-messenger
+nix development
+yarn example start
 ```
+Then `i` for iOS or `a` for Android.
 
-## Usage
+### Other
 
-
-```js
-import { multiply } from 'p2p-messenger';
-
-// ...
-
-const result = multiply(3, 7);
-```
+Ensure proper NDK and java/rust dependencies are satisfied then using `yarn`
+like normal **should** work.
 
 
 ## Contributing
