@@ -102,6 +102,7 @@
               watchman
               aapt
               cargo-ndk
+              typescript-language-server
             ]);
 
           JAVA_HOME = java-jdk.home;
